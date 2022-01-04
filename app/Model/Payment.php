@@ -11,4 +11,8 @@ class Payment extends Model
     public function service(){
         return $this->belongsTo("App\Model\Service");
     }
+
+    public function user(){
+        return $this->belongsTo("App\User");
+    }
 }

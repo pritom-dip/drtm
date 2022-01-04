@@ -11,7 +11,7 @@
                             </li>
                             <li>
                                 <i class="fas fa-phone-volume"></i>
-                                <a href="tel:+880 1713482773" class="">+880 1713482773</a>
+                                <a href="tel:+880 1713482773" class="">+880 1712345567</a>
                             </li>
                         </ul>
                     </div>
@@ -45,9 +45,16 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dashboard/login.html"
-                            ><button class="btn btn-sm btn-success">Login</button></a
-                        >
+                        @if (Auth::check())
+                            <div class="info">
+                            <a class="nav-link">{{ Auth::user()->name ?? ""}}</a>
+                            </div>
+                        @else
+                            <a class="nav-link" href="dashboard/login.html"
+                                ><button class="btn btn-sm btn-success">Login</button></a
+                            >
+                        @endif
+                        
                     </li>
 
                     <li class="nav-item">

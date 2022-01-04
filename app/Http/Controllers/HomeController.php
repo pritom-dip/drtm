@@ -61,4 +61,10 @@ class HomeController extends Controller
         ]);
     }
 
+    public function transactions(){
+        $user_id = Auth::user()->id;
+        $transactions = Payment::where('user_id', $user_id)->where('status', 'success')->get();
+        dd($transactions);
+    }
+
 }

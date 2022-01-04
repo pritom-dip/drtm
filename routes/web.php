@@ -51,6 +51,7 @@ Route::get('/gallery', 'forntendController@gallery')->name('gallery');
 Route::get('/contact', 'forntendController@contact')->name('contact');
 Route::get('/donate/{id}', 'HomeController@donate')->name('donate');
 Route::post('/donate/{id}', 'HomeController@submit_donation')->name('donate.submit');
+Route::get('/transactions', 'HomeController@transactions')->name('transactions');
 
 
 

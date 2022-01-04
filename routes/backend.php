@@ -31,6 +31,8 @@ Route::prefix('/admin')->group(function () {
             Route::resource('service',              'ServiceController');
             Route::resource('team',                 'TeamController');
             Route::resource('project',              'ProjectController');
+            Route::get('transactions',              'PaymentController@index')->name('payment.index');
+            Route::get('show-transactions/{id}',    'PaymentController@show')->name('payment.show');
 
 
         });
