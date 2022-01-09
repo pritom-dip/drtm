@@ -90,6 +90,50 @@
     <!-- validaiton, success, error, alert message -->
     @include('admin.message-PNotify')
 
+
+        <!-- Print Page Open Script -->
+    <script>
+        function printContent(el) {
+            console.log(el);
+            var restorepage = document.body.innerHTML;
+            var printcontent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printcontent;
+            window.print();
+            location.reload();
+            document.body.innerHTML = restorepage;
+        }
+    </script>
+    <style type="text/css">
+        @media print {
+
+            html,
+            body {
+                height: auto;
+                font-size: 10px;
+            }
+
+            .cusPadd {
+                padding: 12px !important;
+            }
+        }
+    </style>
+    <!-- Print Page Open Script -->
+    <script>
+        function handleClick(id) {
+            $('#modalOpen').modal('show');
+            let el = $('#show_' + id).html();
+            $('.modal-body').html(el);
+            $('.modal-body').children('.des').show();
+        }
+    </script>
+
+    <style>
+        .modal-body {
+            color: #555 !important;
+            text-align: justify !important;
+        }
+    </style>
+
 </body>
 
 </html>

@@ -5,29 +5,39 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AdminUpdateRequest;
 use App\Http\Requests\AdminCreateRequest;
 use App\Admin;
+use App\User;
 use App\Model\Role;
+use App\Model\Blood;
+use App\Model\Payment;
+use App\Model\Service;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth:admin');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function dashboard()
     {
-        return view('admin.admin');
+
+        $tasks = [];
+
+        $results = Payment::all()->groupby('service_id');
+        if(!empty($results) && count($results) > 0){
+            foreach($results as $key => $result){
+                $service = Service::find($key)->title;
+                $temp = [$service, $result->sum("amount")];
+                array_push($tasks, $temp);
+            }
+        }
+        $employeesNum = Admin::count();
+        $userNum = User::count();
+        $bloodDonator = Blood::count();
+        $bloodDonator = Blood::count();
+        $revenue = Payment::all()->sum('amount');
+        return view('admin.dashboard.index', compact('employeesNum', 'userNum', 'bloodDonator', 'revenue', 'tasks'));
     }
 
     public function profileView(Admin $admin)

@@ -16,7 +16,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-3 col-md-6 folouws">
+                    <div class="col-lg-6 col-md-9 folouws">
                         <ul class="ulright">
                             <li><small>Follow Us </small>:</li>
                             <li>
@@ -36,41 +36,67 @@
                                 <i class="fab fa-linkedin"></i>
                             </li>
                         </ul>
+
+                        <ul class=" ml-auto d-flex">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/donate/1">
+                                <button class="btn btn-sm btn-success">Donate Request</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blood-donator">
+                                <button class="btn btn-sm btn-success">Blood Donator Form</button>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            @if (Auth::check())
+                                <div class="info">
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            {{ Auth::user()->name ?? ""}}
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                                                document.getElementById('logout-form').submit();">Logout</a>
+
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                    @csrf
+                                                </form>
+                                            </div>
+
+                                            <a class="dropdown-item" href="/transactions">Transaction</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            @else
+                                <a class="nav-link" href="/login"
+                                    ><button class="btn btn-sm btn-success">Login</button></a
+                                >
+                            @endif
+                            
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register"></a>
+                        </li>
+
+                    </ul>
+
+
                     </div>
-                    <!--<ul class="navbar-nav ml-auto">-->
-                    <!-- Authentication Links -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="view/request/donate.html">
-                            <button class="btn btn-sm btn-success">Donate Request</button>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        @if (Auth::check())
-                            <div class="info">
-                            <a class="nav-link">{{ Auth::user()->name ?? ""}}</a>
-                            </div>
-                        @else
-                            <a class="nav-link" href="dashboard/login.html"
-                                ><button class="btn btn-sm btn-success">Login</button></a
-                            >
-                        @endif
-                        
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard/register.html"></a>
-                    </li>
-
-                    <!--</ul>-->
+                    
                 </div>
             </div>
         </div>
 
         <div id="menu-jk" class="header-bottom">
             <div class="container">
-                <div class="row nav-row">
+                <div class="row nav-row align-items-center">
                     <div class="col-lg-3 col-md-12 logo">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="Dashboard/assets/images/logo.jpg" width="130px" height="auto" alt="" />
                             <a data-toggle="collapse" data-target="#menu" href="#menu"
                                 ><i class="fas d-block d-lg-none small-menu fa-bars"></i
@@ -80,24 +106,24 @@
                     <div id="menu" class="col-lg-9 col-md-12 d-none d-lg-block nav-col">
                         <ul class="navbad">
                             <li class="nav-item active">
-                                <a class="nav-link" href="index-2.html">Home </a>
+                                <a class="nav-link" href="/">Home </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">About Us</a>
+                                <a class="nav-link" href="/about">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="service.html">Services</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
+                                <a class="nav-link" href="/services">Services</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
+                                <a class="nav-link" href="/gallery">Gallery</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/blood-donator-list">Donator List</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact US</a>
+                                <a class="nav-link" href="/contact">Contact US</a>
                             </li>
                         </ul>
                     </div>

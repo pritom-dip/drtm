@@ -52,7 +52,9 @@ Route::get('/contact', 'forntendController@contact')->name('contact');
 Route::get('/donate/{id}', 'HomeController@donate')->name('donate');
 Route::post('/donate/{id}', 'HomeController@submit_donation')->name('donate.submit');
 Route::get('/transactions', 'HomeController@transactions')->name('transactions');
-
+Route::get('/blood-donator-list', 'BloodController@list')->name("blood.donate.list");
+Route::get('/blood-donator', 'BloodController@show')->name("blood.donate.create");
+Route::post('/blood-donator', 'BloodController@store')->name("blood.donate.submit");
 
 
 

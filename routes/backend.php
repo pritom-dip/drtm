@@ -33,6 +33,8 @@ Route::prefix('/admin')->group(function () {
             Route::resource('project',              'ProjectController');
             Route::get('transactions',              'PaymentController@index')->name('payment.index');
             Route::get('show-transactions/{id}',    'PaymentController@show')->name('payment.show');
+            Route::get('reports',                   'PaymentController@getReport')->name('payment.reports');
+            Route::get('individual-report',           'PaymentController@reports')->name('payment.specific');
 
 
         });

@@ -21,19 +21,19 @@
                 <h2>Useful Links</h2>
                 <ul class="list-unstyled link-list">
                     <li>
-                        <a ui-sref="about" href="aboutus.html">About us</a><i class="fa fa-angle-right"></i>
+                        <a ui-sref="about" href="/about">About us</a><i class="fa fa-angle-right"></i>
                     </li>
                     <li>
-                        <a ui-sref="service" href="service.html">Services</a
+                        <a ui-sref="service" href="/services">Services</a
                         ><i class="fa fa-angle-right"></i>
                     </li>
 
                     <li>
-                        <a ui-sref="gallery" href="gallery.html">Gallery</a
+                        <a ui-sref="gallery" href="/gallery">Gallery</a
                         ><i class="fa fa-angle-right"></i>
                     </li>
                     <li>
-                        <a ui-sref="contact" href="contact.html">Contact us</a
+                        <a ui-sref="contact" href="/contact">Contact us</a
                         ><i class="fa fa-angle-right"></i>
                     </li>
                 </ul>
@@ -57,37 +57,22 @@
         <div class="nav-box row clearfix">
             <div class="inner col-md-9 clearfix">
                 <ul class="footer-nav clearfix">
-                    <li><a href="index-2.html">Home</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/service">Services</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
             <div class="donate-link col-md-3">
-                <a href="view/request/donate.html" class="btn btn-primary"
+                <a href="/donate/1" class="btn btn-primary"
                     ><span class="btn-title">Donate Now</span></a
                 >
             </div>
         </div>
     </div>
 
-    <div class="copy">
-        <div class="container">
-            <a href="https://www.techknightsolutions.com/"
-                >2021 &copy; All Rights Reserved | Designed and Developed by Agent eKnight</a
-            >
-
-            <span>
-                <a><i class="fab fa-github"></i></a>
-                <a><i class="fab fa-google-plus-g"></i></a>
-                <a><i class="fab fa-pinterest-p"></i></a>
-                <a><i class="fab fa-twitter"></i></a>
-                <a><i class="fab fa-facebook-f"></i></a>
-            </span>
-        </div>
-    </div>
+    
 
                 <!-- Messenger Chat plugin Code -->
                 <div id="fb-root"></div>
