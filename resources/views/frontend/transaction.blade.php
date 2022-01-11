@@ -27,6 +27,7 @@
                                     <tr>
 
                                         <th data-breakpoints="sm xs"> Name</th>
+                                        <th data-breakpoints="sm xs"> Service</th>
                                         <th data-breakpoints="xs">Email</th>
                                         <th data-breakpoints="xs md">Mobile Number</th>
                                         <th data-breakpoints="sm xs md">Amount</th>
@@ -38,6 +39,9 @@
                                   @forelse ($transactions as $transaction)
                                       <tr>
                                         <td>{{Auth::user()->name}}
+                                        </td>
+
+                                        <td>{{$transaction->service->title}}
                                         </td>
 
                                         <td>

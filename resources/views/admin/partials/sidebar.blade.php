@@ -18,40 +18,16 @@
             </div>
         </div>
 
-        <!-- /.search form -->
-        <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
-                <a href="#">
+                <a href="/admin" style="display: block;">
                     <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
             </li>
 
             <x-sidebarcomponent />
 
-
-            <!---------------------- Delete -------------------------------->
-
-            {{-- <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-cogs"></i> <span>System Settings</span>
-                    <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li>
-                        <a href="{{route('menu.index')}}"><i class="fa fa-circle-o"></i> Authorized Menu</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li>
-                <a href="{{route('admin.index')}}">
-                    <i class="fa fa-users"></i> <span>Admins</span>
-                </a>
-            </li> --}}
         </ul>
     </section>
     <!-- /.sidebar -->
