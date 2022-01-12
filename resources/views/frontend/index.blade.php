@@ -92,7 +92,7 @@
             <div class="image-part col-md-6">
                 <div class="about-quick-box row">
                     <div class="col-md-6">
-                        <a href="Volunteer.html">
+                        <a href="/">
                             <div class="about-qcard">
                                 <i class="fas fa-user"></i>
                                 <p>Become a Volunteer</p>
@@ -100,7 +100,7 @@
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <a href="requestfund.html">
+                        <a href="/">
                             <div class="about-qcard">
                                 <i class="fas fa-search-dollar red"></i>
                                 <p>Request Fund</p>
@@ -108,7 +108,7 @@
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <a href="view/request/donate.html">
+                        <a href="/">
                             <div class="about-qcard">
                                 <i class="fas fa-donate yell"></i>
                                 <p>Give Donation</p>
