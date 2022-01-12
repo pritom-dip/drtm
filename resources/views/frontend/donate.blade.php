@@ -75,7 +75,7 @@
                     <div style="margin-top:10px;" class="row">
                         <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
                         <div class="col-sm-8">
-                            <button class="btn btn-primary btn-sm" id="btn-submit" type="submit">Send Message</button>
+                            <button class="btn btn-primary btn-sm" id="btn-submit" type="submit">Submit</button>
                         </div>
                     </div>
 

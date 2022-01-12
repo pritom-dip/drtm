@@ -265,7 +265,7 @@
                 @foreach($teams as $team)
                     <div class="col-md-4 col-sm-4">
                         <div class="single-usr">
-                            @if(!empty($service->image))
+                            @if(!empty($team->image))
                             <img class="profile-user-img img-responsive img-circle" src="{{ asset('storage/images/'.$team->image) }}" /></td>
                             @else
                             <img class="profile-user-img img-responsive img-circle" src="{{url('storage/images/user1-128x128.jpg')}}" alt="User profile picture" />
