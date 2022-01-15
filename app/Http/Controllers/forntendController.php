@@ -28,7 +28,8 @@ class forntendController extends Controller
     // ---------services-----------
     public function services()
     {
-        return view('frontend.services');
+        $services   = Service::latest()->get();
+        return view('frontend.services', compact('services'));
     }
 
     // ---------services-----------
